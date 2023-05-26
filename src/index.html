@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+
+  <title>Candidate Exercise</title>
+</head>
+
+<body>
+  <div class="exercise-header">
+    <h2>Exercise 1 - Testimonial Block</h2>
+  </div>
+
+  <div>
+    <div>
+      <div>
+        <p>Gingerbread tart cupcake cake muffin cookie liquorice tiramisu. Toffee cupcake cake cake croissant icing carrot cake cookie. Dessert chocolate bar apple pie sesame snaps liquorice carrot cake cookie danish.</p>
+        <span>Indiana Jones, Archaeologist</span>
+      </div>
+      <a>Tell Me More</a>
+    </div>
+  </div>
+
+  <div class="exercise-header">
+    <h2>Exercise 2 - Filterable Content</h2>
+  </div>
+
+  <div>
+    <div class="filterable-content">
+
+      <div class="filter-controls container">
+
+        <div class="filter-buttons">
+          <div class="btn-group" id="genre-filter">
+            <a href="#" class="filter-link" id="filter-link-action">action</a>
+            <a href="#" class="filter-link" id="filter-link-adventure">adventure</a>
+            <a href="#" class="filter-link" id="filter-link-animation">animation</a>
+            <a href="#" class="filter-link" id="filter-link-biography">biography</a>
+            <a href="#" class="filter-link" id="filter-link-classics">classics</a>
+            <a href="#" class="filter-link" id="filter-link-comedy">comedy</a>
+            <a href="#" class="filter-link" id="filter-link-crime">crime</a>
+            <a href="#" class="filter-link" id="filter-link-detective">detective</a>
+            <a href="#" class="filter-link" id="filter-link-dragons">dragons</a>
+            <a href="#" class="filter-link" id="filter-link-drama">drama</a>
+            <a href="#" class="filter-link" id="filter-link-fantasy">fantasy</a>
+            <a href="#" class="filter-link" id="filter-link-fooddrink">food &amp; drink</a>
+            <a href="#" class="filter-link" id="filter-link-history">history</a>
+            <a href="#" class="filter-link" id="filter-link-horror">horror</a>
+            <a href="#" class="filter-link" id="filter-link-memoir">memoir</a>
+            <a href="#" class="filter-link" id="filter-link-mystery">mystery</a>
+            <a href="#" class="filter-link" id="filter-link-politics">politics</a>
+            <a href="#" class="filter-link" id="filter-link-sci-fi">sci-fi</a>
+            <a href="#" class="filter-link" id="filter-link-science">science</a>
+            <a href="#" class="filter-link" id="filter-link-thriller">thriller</a>
+            <a href="#" class="filter-link" id="filter-link-war">war</a>
+            <a href="#" class="filter-link" id="filter-link-western">western</a>
+          </div>
+       </div>
+
+        <div class="filter-buttons">
+          <div class="btn-group" id="year-filter">
+            <a href="#" class="filter-link" id="filter-link-1870">1870</a>
+            <a href="#" class="filter-link" id="filter-link-1892">1892</a>
+            <a href="#" class="filter-link" id="filter-link-1895">1895</a>
+            <a href="#" class="filter-link" id="filter-link-1963">1963</a>
+            <a href="#" class="filter-link" id="filter-link-1971">1971</a>
+            <a href="#" class="filter-link" id="filter-link-1973">1973</a>
+            <a href="#" class="filter-link" id="filter-link-1974">1974</a>
+            <a href="#" class="filter-link" id="filter-link-1977">1977</a>
+            <a href="#" class="filter-link" id="filter-link-1981">1981</a>
+            <a href="#" class="filter-link" id="filter-link-1984">1984</a>
+            <a href="#" class="filter-link" id="filter-link-1987">1987</a>
+            <a href="#" class="filter-link" id="filter-link-1991">1991</a>
+            <a href="#" class="filter-link" id="filter-link-1993">1993</a>
+            <a href="#" class="filter-link" id="filter-link-1994">1994</a>
+            <a href="#" class="filter-link" id="filter-link-1996">1996</a>
+            <a href="#" class="filter-link" id="filter-link-1998">1998</a>
+            <a href="#" class="filter-link" id="filter-link-2000">2000</a>
+            <a href="#" class="filter-link" id="filter-link-2002">2002</a>
+            <a href="#" class="filter-link" id="filter-link-2003">2003</a>
+            <a href="#" class="filter-link" id="filter-link-2005">2005</a>
+            <a href="#" class="filter-link" id="filter-link-2008">2008</a>
+            <a href="#" class="filter-link" id="filter-link-2010">2010</a>
+            <a href="#" class="filter-link" id="filter-link-2013">2013</a>
+            <a href="#" class="filter-link" id="filter-link-2015">2015</a>
+          </div>
+        </div>
+
+        <div class="filter-buttons">
+          <div class="btn-group" id="type-filter">
+            <a href="#" class="filter-link" id="filter-link-movie">Movies</a>
+            <a href="#" class="filter-link" id="filter-link-book">Books</a>
+          </div>
+        </div>  
+
+        <a href="#" id="clear">CLEAR FILTERS</a>
+
+      </div>
+  
+      <div class="container filter-cards">
+        <div class="row grid-container" id="itemList"> 
+        </div>
+
+        <p id="filter-items-empty" class="empty-warning" style="display: none;">Sorry, we can't find anything that matches that.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<footer>
+  <script type="module" src="js/bundle.js"></script>
+  <script src="js/filter.js"></script>
+  <script>
+    const element = 'itemList';
+    const items = [];
+    fetch("./js/data/data.json")
+      .then((res) => {
+          return res.json();
+      })
+      .then(data =>{
+
+      //console logs for data check
+      //console.log('sucess: '+JSON.stringify(data.media));
+      //console.log(data.media.length+' items');
+
+      var yearArray = [];
+
+        for (var i=0; i<data.media.length; i++) {
+
+            /* Build a list of filter links for genres */
+
+            /* building the class list */
+            var filterClasses = '';
+            var genresOnly = '';
+
+            /* for loop produces cards to filter*/
+            for (var g=0; g<data.media[i].genre.length; g++) {
+              //for filter classes
+              filterClasses += data.media[i].genre[g].replace(/\s+/g, '-').replace(/[^a-zA-Z ]/g, "").toLowerCase() + ' ';
+              //for the card display
+              genresOnly += ', ' + data.media[i].genre[g] + '';
+            }  
+
+              filterClasses += 'year-'+data.media[i].year + ' ';
+              yearArray.push(data.media[i].year);
+
+              filterClasses += ''+data.media[i].type + ' ';
+
+              document.getElementById('itemList').insertAdjacentHTML('beforeend', '' +
+                '<div class="grid-item filter-item ' + filterClasses + '">' +
+                  '<div class="card">' +
+                    '<img src="'+data.media[i].poster.replace('oops-i-dont-work.jpg', 'placehold.jp/30/CCCCCC/000000/666x1000.png?text=Image+Not+Found')+'" alt="Poster for ' + data.media[i].title + '">' +
+                      '<div class="card-body">' +
+                          '<h4 class="card-title">' + data.media[i].title + ' (' +data.media[i].year+ ')</h4>' +
+                          '<h5 class="card-title">Genres:' + genresOnly.substr(1, genresOnly.length - 1) + '</h5>' +
+                        '</div>' +
+                      '</div>' +
+                    '</div>')
+
+                     
+            }
+
+            /* Build a list of filter links for years. This code and one similar for the genres were used to manually generate the filter lists*/
+            /*
+            var uA = yearArray.filter((value, index, self) => self.indexOf(value) === index);
+            console.log('yearArray: '+JSON.stringify(uniqueYearArray)); 
+
+            var uniqueYearArray = uA.sort();
+
+            for (var ug=0; ug<uniqueYearArray.length; ug++) {
+              document.getElementById('year-filter').insertAdjacentHTML('beforeend', '' +
+                '<a href="#" class="filter-link" id="filter-link-'+uniqueYearArray[ug]+'">'+uniqueYearArray[ug]+'</a>'
+                )
+            } 
+            */ 
+            /*
+            for (var ag=0; ag<uniqueYearArray.length; ag++) {
+              document.getElementById('year-filter').insertAdjacentHTML('beforeend', '' +
+
+                '{'+
+                  '\'element\': document.getElementById(\'filter-link-'+uniqueYearArray[ag]+'\'),'+
+                  '\'tag\': \'year-'+uniqueYearArray[ag]+'\''+
+                '},'+ '\n'
+                )
+            }  
+            */
+            
+          })
+          .catch(err => {
+            document.getElementById(element).innerHTML = "Sorry, The requested resource is not available at this time.";
+          });
+ 
+    var config = {
+        'emptyBlock': document.getElementById('filter-items-empty'),
+        'filters': [
+            {
+                'key': 'year',
+                'type': 'exclusive',
+                'select': 'multiple',
+                'buttons': [
+                {
+                  'element': document.getElementById('filter-link-1870'),
+                  'tag': 'year-1870'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1892'),
+                  'tag': 'year-1892'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1895'),
+                  'tag': 'year-1895'
+                },
+                {
+                  'element': document.getElementById('filter-link-1963'),
+                  'tag': 'year-1963'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1971'),
+                  'tag': 'year-1971'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1973'),
+                  'tag': 'year-1973'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1974'),
+                  'tag': 'year-1974'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1977'),
+                  'tag': 'year-1977'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1981'),
+                  'tag': 'year-1981'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1984'),
+                  'tag': 'year-1984'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1987'),
+                  'tag': 'year-1987'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1991'),
+                  'tag': 'year-1991'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1993'),
+                  'tag': 'year-1993'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1994'),
+                  'tag': 'year-1994'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1996'),
+                  'tag': 'year-1996'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-1998'),
+                  'tag': 'year-1998'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-2000'),
+                  'tag': 'year-2000'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-2002'),
+                  'tag': 'year-2002'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-2003'),
+                  'tag': 'year-2003'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-2005'),
+                  'tag': 'year-2005'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-2008'),
+                  'tag': 'year-2008'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-2010'),
+                  'tag': 'year-2010'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-2013'),
+                  'tag': 'year-2013'
+                }, 
+                {
+                  'element': document.getElementById('filter-link-2015'),
+                  'tag': 'year-2015'
+                },
+                ]
+            },
+            {
+                'key': 'genre',
+                'type': 'inclusive',
+                'select': 'multiple',
+                'buttons': [
+                {
+                    'element': document.getElementById('filter-link-action'),
+                    'tag': 'action'
+                }, 
+                  {
+                  'element': document.getElementById('filter-link-adventure'),
+                  'tag': 'adventure'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-comedy'),
+                  'tag': 'comedy'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-crime'),
+                  'tag': 'crime'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-sci-fi'),
+                  'tag': 'sci-fi'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-thriller'),
+                  'tag': 'thriller'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-fantasy'),
+                  'tag': 'fantasy'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-western'),
+                  'tag': 'western'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-drama'),
+                  'tag': 'drama'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-mystery'),
+                  'tag': 'mystery'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-horror'),
+                  'tag': 'horror'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-animation'),
+                  'tag': 'animation'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-history'),
+                  'tag': 'history'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-war'),
+                  'tag': 'war'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-science'),
+                  'tag': 'science'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-biography'),
+                  'tag': 'biography'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-fooddrink'),
+                  'tag': 'fooddrink'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-memoir'),
+                  'tag': 'memoir'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-politics'),
+                  'tag': 'politics'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-dragons'),
+                  'tag': 'dragons'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-classics'),
+                  'tag': 'classics'
+                }, 
+                  {
+                    'element': document.getElementById('filter-link-detective'),
+                  'tag': 'detective'
+                },
+                ]
+            },            {
+                'key': 'type',
+                'type': 'inclusive',
+                'select': 'single',
+                'buttons': [
+                {
+                    'element': document.getElementById('filter-link-movie'),
+                    'tag': 'movie'
+                }, 
+                  {
+                  'element': document.getElementById('filter-link-book'),
+                  'tag': 'book'
+                }
+                ]
+            }
+        ]
+    }
+    
+    var filter = new Filter(config);
+
+
+    //Global Filter Reset */
+    document.getElementById("clear").onclick = function() {reload()};
+    function reload() {
+        window.location = window.location.href.split("?")[0];
+    }
+
+  </script>
+</footer>
+</html>

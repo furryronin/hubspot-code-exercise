@@ -1,0 +1,68 @@
+/* Exercise 2 - Filterable Content */
+
+div.filterable-content {
+    border: 2px solid $light-gray;
+    margin: 20px 30px;
+
+    .container {
+        width: 100%;
+
+        &.filter-controls{
+            padding: 30px;
+            border-bottom: 2px solid $light-gray;
+
+            .filter-buttons {
+                display: inline-block;
+                width:100%;
+                margin-bottom: 20px;
+                a {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .grid-container {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: auto;
+
+            @include md {
+                grid-template-columns: auto auto;
+            }
+            @include lg {
+                grid-template-columns: auto auto auto;
+            }
+
+            gap: 20px 20px;
+            .grid-item {
+                .card {
+                    margin-bottom: 2rem;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                    h4 {
+                        margin-bottom: 0px;
+                    }
+                    h5 {
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .filter-item-active {
+        display:block;
+    }
+    .filter-item-inactive {
+        display:none;
+    }
+    .empty-warning {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+}

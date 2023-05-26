@@ -1,0 +1,28 @@
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+	-webkit-transition: $what $time $how;
+	-moz-transition: $what $time $how;
+	-ms-transition: $what $time $how;
+	-o-transition: $what $time $how;
+	transition: $what $time $how;
+  }
+
+@mixin border-radius {
+	border-radius: 4px;
+}
+
+@mixin custom-button {
+	@include transition(background);
+	font-size: .825rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	@include border-radius;
+	padding: 25px 40px;
+	border: 2px solid transparent;
+    max-width: 190px;
+    text-align: center;
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}

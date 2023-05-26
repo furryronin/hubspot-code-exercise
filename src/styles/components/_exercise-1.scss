@@ -1,0 +1,81 @@
+/* Exercise 1 - Testimonial Block */
+
+div:not(.filterable-content):not(.exercise-header):not(.row):not(.container):not(.filter-buttons):not(.btn-group):not(.grid-item):not(.column):not(.card):not(.card-body) {
+    
+  padding: 33px 0px;
+  background: $exercise-1-background;
+  
+    & > div:not(.filterable-content):not(.container):not(.row):not(.filter-buttons):not(.btn-group):not(.grid-item):not(.column):not(.card):not(.card-body){
+   
+    margin: 0px auto;
+    display: block;
+    max-width: 800px;
+          
+      & > div:not(.filter-buttons):not(.btn-group):not(.filter-item):not(.card):not(.card-body):not(.row):not(.container):not(.grid-item) {
+        display: inline-block;
+        vertical-align:middle;
+        border-left: 2px solid $hubspot-orange;
+        position: relative;
+        padding: 0px;
+        margin: 0px 17px;
+     
+        &:before {
+            content: url("data:image/svg+xml,%3Csvg width='19' height='23' fill='%23ffffff' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' d='M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z'/%3E%3C/svg%3E");
+            color: $white;
+            background: $hubspot-orange;
+            width: 40px;
+            height: 40px;
+            padding: 7px 8px;
+            border-radius: 50%;
+            border: 2px solid $white;
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: -20px;
+        }
+        &:after {
+          content: " ";
+          background: $hubspot-orange;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          left: -5px;
+        }
+        p {
+            font-family: 'Roboto Slab', serif;
+            max-width: 520px;
+            display: block;
+            padding: 33px 0px 33px 30px;
+            margin: 0px 40px 0px 0px;
+         }
+        span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            display: block;
+            padding-left: 30px;
+         }
+      }
+
+      a {
+        font-family: 'Montserrat', sans-serif;
+        color: $white;
+        @include background-opacity($button-blue, 1);
+        display: inline-block;
+        @include custom-button;
+        margin: 30px 47px;
+        @include rwd(785px) {
+          margin: 0px;
+        }
+        cursor: pointer;
+
+        &:hover {
+          @include background-opacity($button-blue, 0.8);
+        }
+      }
+   
+     }
+   
+   }
